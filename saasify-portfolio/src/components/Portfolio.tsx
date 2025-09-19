@@ -7,17 +7,17 @@ const portfolioItems = [
   {
     title: "Project Alpha",
     description: "A micro-SaaS for a niche market, built with Next.js and Supabase.",
-    imageUrl: "https://fpoimg.com/600x400?text=Project%20Alpha&bg_color=1E293B&text_color=EEEEEE",
+    imageUrl: "https://picsum.photos/seed/alpha/600/400",
   },
   {
     title: "Project Beta",
     description: "A high-converting landing page for a new mobile app.",
-    imageUrl: "https://fpoimg.com/600x400?text=Project%20Beta&bg_color=1E293B&text_color=EEEEEE",
+    imageUrl: "https://picsum.photos/seed/beta/600/400",
   },
   {
     title: "Project Gamma",
     description: "A professional website for a creative agency.",
-    imageUrl: "https://fpoimg.com/600x400?text=Project%20Gamma&bg_color=1E293B&text_color=EEEEEE",
+    imageUrl: "https://picsum.photos/seed/gamma/600/400",
   },
 ];
 
@@ -42,9 +42,9 @@ const Portfolio = () => {
                 <Image
                   src={item.imageUrl}
                   alt={item.title}
-                  layout="fill"
-                  objectFit="cover"
-                  unoptimized={true}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
               <div className="p-6">
